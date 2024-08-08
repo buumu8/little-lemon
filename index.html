@@ -7,7 +7,7 @@
     <title>Little Lemon</title>
     <meta name="description" content="A brief description">
     <meta name="author" content="Little Lemon Restaurant">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
 </head>
 
@@ -16,7 +16,12 @@
         <img src="/assets/Asset 14@4x.png">
     </header>
     <nav>
-        <ul>
+        <!-- The hamburger menu -->
+        <label for='menu' tabindex="0">
+            ☰
+        </label>
+        <input id='menu' type='checkbox' />
+        <ul class="nav-mobile">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="book.html">Book</a></li>
@@ -24,6 +29,8 @@
         </ul>
     </nav>
     <main>
+        <section class="banner">
+        </section>
         <section>
             <article>
                 <h1>Heading 1</h1>
@@ -35,21 +42,21 @@
         </section>
         <section>
             <article>
-                <h2>Heading 2</h2>
+                <h2 content="1">Heading 2</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum neque minima illo cum placeat sequi asperiores veniam, totam vel
                     recusandae quas unde alias illum nobis ratione odit molestias voluptatibus nihil?
                 </p>
             </article>
             <article>
-                <h2>Heading 2</h2>
+                <h2 content="2">Heading 2</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum neque minima illo cum placeat sequi asperiores veniam, totam vel
                     recusandae quas unde alias illum nobis ratione odit molestias voluptatibus nihil?
                 </p>
             </article>
             <article>
-                <h2>Heading 2</h2>
+                <h2 content="3">Heading 2</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum neque minima illo cum placeat sequi asperiores veniam, totam vel
                     recusandae quas unde alias illum nobis ratione odit molestias voluptatibus nihil?

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+
+  background-color: #edefee;
+  margin: 3rem 3rem 5% 5%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  padding: 1rem;
+}
+
+nav {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  /* Make the markers disappear */
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+nav ul li {
+  /* Puts the elements in a single line */
+  font-size: 2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+}
+
+.banner {
+  background: url("../../assets/banner.jpg");
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+article {
+  flex: 1;
+  padding: 1rem;
+}
+
+h2 {
+  --f: 1.05; /* the scale factor */
+
+  clip-path: inset(0);
+  transition: 0.4s;
+}
+
+h2[content="1"]::before {
+  background: url("../../assets/img1.jpg");
+  content: "";
+  display: block;
+  width: 100%;
+  background-size: cover;
+  height: 150px;
+}
+
+h2[content="2"]::before {
+  background: url("../../assets/img2.jpg");
+  content: "";
+  display: block;
+  width: 100%;
+  background-size: cover;
+  height: 150px;
+}
+
+h2[content="3"]::before {
+  background: url("../../assets/img3.jpg");
+  content: "";
+  display: block;
+  width: 100%;
+  background-size: cover;
+  height: 150px;
+}
+
+h2:hover {
+  clip-path: inset(calc((1 - 1 / var(--f)) * 50%));
+  scale: var(--f);
+}
+
+footer {
+  display: flex;
+  padding: 0.25rem;
+  align-items: center;
+}
+
+footer div {
+  flex: 1;
+}
+footer > div:nth-child(2) {
+  text-align: right;
+}
+
+footer img {
+  width: 5vw;
+}
+
+a {
+  box-shadow: inset 0 0 0 0 rgb(47, 62, 11);
+  color: rgb(47, 62, 11);
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  text-decoration: none;
+}
+
+a:hover {
+  box-shadow: inset 100px 0 0 0 hsl(57, 94%, 56%);
+  border-radius: 0.5rem;
+  color: rgb(47, 62, 11);
+}
+
+nav input[type="checkbox"],
+nav label {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* Because we are in mobile mode, we want to display it as a
+       vertical list */
+  nav ul {
+    display: block;
+  }
+  /* We have two lists: the first one are the always visibile items
+       in the menu bar. The second one is the one that will be hidden */
+  nav ul:last-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  nav ul li {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em;
+  }
+
+  nav input[type="checkbox"],
+  nav label {
+    display: block;
+  }
+
+  input[type="checkbox"]:not(:checked) + ul {
+    display: none;
+  }
+
+  #menu {
+    display: none;
+  }
+}
